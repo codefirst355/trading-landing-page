@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); */
+
+@layer base {
+  @font-face {
+    font-family: "SFProDisplay-Black";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("./assets/fonts/SFProDisplay-Black.woff") format("woff");
+  }
+  @font-face {
+    font-family: "SFProDisplay-Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("./assets/fonts/SFProDisplay-Regular.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "SFProDisplay-Bold";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("./assets/fonts/SFProDisplay-Bold.woff") format("woff");
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+body {
+  /* font-family: "Inter", sans-serif; */
+  font-family: "SFProDisplay-Regular";
+  @apply text-lg;
+}
+
+.heading {
+  /* font-size: 50px;
+  line-height: 3rem; */
+  @apply font-black text-white font-[SFProDisplay-Black] text-[20px] lg:text-[50px];
+}
+
+.heading-2 {
+  @apply lg:text-5xl text-white font-[SFProDisplay-Black];
+}
+
+.heading-3 {
+  @apply lg:text-3xl text-white font-[SFProDisplay-Black];
+}
